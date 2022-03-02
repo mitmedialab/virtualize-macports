@@ -51,7 +51,7 @@ echo "### virtualizer added those ^^^ config changes" >> $VIRTUALIZE_HOMEBREW_DI
 
 export PATH="$VIRTUALIZE_HOMEBREW_DIR/macports/bin:$PATH"
 port selfupdate
-port install -N the_silver_searcher
+#port -N install the_silver_searcher  # this just takes too damn long
 
 echo "macports installed"
 
