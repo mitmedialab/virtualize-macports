@@ -20,8 +20,7 @@ fi
 VIRTUALIZE_MACPORTS_DIR=$( cd -- "$( dirname -- "${VIRTUALIZE_SOURCED_NAME}" )" &> /dev/null && pwd )
 
 VIRTUALIZE_MACPORTS_ORIG_PATH="$PATH"
-#export PATH="$VIRTUALIZE_MACPORTS_DIR/macports/sbin:$VIRTUALIZE_MACPORTS_DIR/macports/bin":$PATH
-export PATH="$VIRTUALIZE_MACPORTS_DIR/macports/bin":$PATH
+export PATH="$VIRTUALIZE_MACPORTS_DIR/macports/sbin:$VIRTUALIZE_MACPORTS_DIR/macports/bin":$PATH
 
 function unactivate_macports() {
     PATH="$VIRTUALIZE_MACPORTS_ORIG_PATH"

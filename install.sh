@@ -50,7 +50,7 @@ case $yn in
 esac
 echo "### virtualizer added those ^^^ config changes" >> $VIRTUALIZE_HOMEBREW_DIR/macports/etc/macports/macports.conf
 
-export PATH="$VIRTUALIZE_HOMEBREW_DIR/bin:$PATH"
+export PATH="$VIRTUALIZE_HOMEBREW_DIR/macports/bin:$PATH"
 port selfupdate
 port install the_silver_searcher
 
