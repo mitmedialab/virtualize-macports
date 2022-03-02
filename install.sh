@@ -37,7 +37,6 @@ echo "do you want this macports install to always build from source?"
 echo "it'll be slower, but is probably more compatable with virtualized. probably."
 echo
 read -p "always build from source [y]? " yn
-echo
 
 case $yn in
     [yY]|yes|Yes|YES|"" )
@@ -52,7 +51,7 @@ echo "### virtualizer added those ^^^ config changes" >> $VIRTUALIZE_HOMEBREW_DI
 
 export PATH="$VIRTUALIZE_HOMEBREW_DIR/macports/bin:$PATH"
 port selfupdate
-port install the_silver_searcher
+port install -N the_silver_searcher
 
 echo "macports installed"
 
