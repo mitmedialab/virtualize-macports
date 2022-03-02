@@ -5,13 +5,4 @@
 .env
 .env.*
 MacPorts-*
-bin/
-etc/
-include/
-lib/
-libexec/
-man/
-sbin/
-share/
-var/
-www/
+macports/

@@ -27,10 +27,10 @@ make install
 cd $VIRTUALIZE_HOMEBREW_DIR
 #rm -rf $VIRTUALIZE_HOMEBREW_DIR/MacPorts-2.7.1  # FIXME once this is working uncomment this
 
-echo "### virtualizer added these config changes:" >> $VIRTUALIZE_HOMEBREW_DIR/etc/macports/macports.conf
+echo "### virtualizer added these config changes:" >> $VIRTUALIZE_HOMEBREW_DIR/macports/etc/macports/macports.conf
 
 echo "setting macports to not use hfs compression"
-echo "hfscompression no" >> $VIRTUALIZE_HOMEBREW_DIR/etc/macports/macports.conf
+echo "hfscompression no" >> $VIRTUALIZE_HOMEBREW_DIR/macports/etc/macports/macports.conf
 
 echo
 echo "do you want this macports install to always build from source?"
@@ -42,13 +42,13 @@ echo
 case $yn in
     [yY]|yes|Yes|YES|"" )
 	echo "setting macports to always build from source"
-	echo "buildfromsource always" >> $VIRTUALIZE_HOMEBREW_DIR/etc/macports/macports.conf
+	echo "buildfromsource always" >> $VIRTUALIZE_HOMEBREW_DIR/macports/etc/macports/macports.conf
 	;;
     * )
 	echo "not setting macports to always build from source"
 	;;
 esac
-echo "### virtualizer added those ^^^ config changes" >> $VIRTUALIZE_HOMEBREW_DIR/etc/macports/macports.conf
+echo "### virtualizer added those ^^^ config changes" >> $VIRTUALIZE_HOMEBREW_DIR/macports/etc/macports/macports.conf
 
 export PATH="$VIRTUALIZE_HOMEBREW_DIR/bin:$PATH"
 port selfupdate
