@@ -32,11 +32,12 @@ echo "### virtualizer added these config changes:" >> $VIRTUALIZE_HOMEBREW_DIR/m
 echo "setting macports to not use hfs compression"
 echo "hfscompression no" >> $VIRTUALIZE_HOMEBREW_DIR/macports/etc/macports/macports.conf
 
-echo
-echo "do you want this macports install to always build from source?"
-echo "it'll be slower, but is probably more compatable with virtualized. probably."
-echo
-read -p "always build from source [y]? " yn
+#echo
+#echo "do you want this macports install to always build from source?"
+#echo "it'll be slower, but is probably more compatable with virtualized. probably."
+#echo
+#read -p "always build from source [y]? " yn
+yn=y  # I don't think we really have a choice
 
 case $yn in
     [yY]|yes|Yes|YES|"" )
