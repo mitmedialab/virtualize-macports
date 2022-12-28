@@ -66,6 +66,3 @@ fi
 
 echo "macports activated for $VIRTUALIZE_MACPORTS_DIR"
 echo "type 'unactivate' to undo"
-
-
-
