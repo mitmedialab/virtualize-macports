@@ -12,9 +12,9 @@ VIRTUALIZE_HOMEBREW_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE}" )" &> /dev/null
 # still creates a ~/.macports dir (for readline history), maybe this can be moved?
 
 cd $VIRTUALIZE_HOMEBREW_DIR
-curl -O https://distfiles.macports.org/MacPorts/MacPorts-2.7.1.tar.bz2
-tar -xf MacPorts-2.7.1.tar.bz2
-cd $VIRTUALIZE_HOMEBREW_DIR/MacPorts-2.7.1
+curl -O https://distfiles.macports.org/MacPorts/MacPorts-2.11.4.tar.bz2
+tar -xf MacPorts-2.11.4.tar.bz2
+cd $VIRTUALIZE_HOMEBREW_DIR/MacPorts-2.11.4
 
 export PATH=/bin:/sbin:/usr/bin:/usr/sbin
 MP_PREFIX="$VIRTUALIZE_HOMEBREW_DIR/macports"
@@ -25,7 +25,7 @@ make
 make install
 
 cd $VIRTUALIZE_HOMEBREW_DIR
-#rm -rf $VIRTUALIZE_HOMEBREW_DIR/MacPorts-2.7.1  # FIXME once this is working uncomment this
+#rm -rf $VIRTUALIZE_HOMEBREW_DIR/MacPorts-2.11.4  # FIXME once this is working uncomment this
 
 echo "### virtualizer added these config changes:" >> $VIRTUALIZE_HOMEBREW_DIR/macports/etc/macports/macports.conf
 
